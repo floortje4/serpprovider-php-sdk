@@ -6,7 +6,7 @@ Full documentation [here](http://www.serpprovider.com/serp-api)  <br />
 <h3>Quickstart</h3>
 Edit api.php and add your API key for SerpProvider
  
-<h3>USAGE:</h3> <br />
+<h3>USAGE:</h3>
 <?php <br />
 include('api.php'); <br />
 echo SerpProvider::query('google','nl','nl','desktop','test');
