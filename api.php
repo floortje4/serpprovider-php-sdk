@@ -6,9 +6,9 @@ define("SERPPROVIDER_ENDPOINT", "http://api.serpprovider.com/");
 define("SERPPROVIDER_OUTPUT", "json"); // json or array 
 
 class SerpProvider{
-	public static function query($provider,$country,$language,$device,$keyword){
+	public static function query($provider,$language,$country,$device,$keyword){
 		//build url
-		$sUrl = SERPPROVIDER_ENDPOINT.SERPPROVIDER_KEY.'/'.$provider.'/'.$country.'-'.$language.'/'.$device.'/'.urlencode(strtolower($keyword));
+		$sUrl = SERPPROVIDER_ENDPOINT.SERPPROVIDER_KEY.'/'.$provider.'/'.$language.'-'.$country.'/'.$device.'/'.urlencode(strtolower($keyword));
 		
 		// fetch json results
 		$json = call_user_func_array('self::'.SERPPROVIDER_FETCHMETHOD,array($sUrl));
